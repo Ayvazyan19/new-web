@@ -11,41 +11,56 @@ body{
     margin: 0;
 }
 
-.banner, .banner>img{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
+.main-site{
+    background: url(../img/bg.png);
+    background-size: 100%;
+    background-repeat: repeat;
+} 
 
-.banner{
-    position: relative;
-    margin: 0;
-}
 
 .box-container{
-    position: absolute;
-    top: 0;
-    left: 15%;
+   max-width: 70%;
+   margin: auto;
+   z-index: 1000000000;
+   padding: 0 20px;
+}
+
+.main,.header{
     background-color: #FFFFFF;
-    width: 70%;
 }
 
 .header{
+    padding-top: 10px ;
+    background-color: #FFFFFF;
+    z-index: 1000000000;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 95%;
-    margin: 15px auto;
+    flex-direction: column;
+}
+
+.header_top_logo{
+    width: 135px;
+    height: 65px;
+}
+
+.header_top_logo>img{
+    width: 100%;
+    height: 100%;
+}
+
+.header_top{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
 }
 
  
 
-.header_form>form{
+.header_top_form>form{
     min-width: 550px;
-    min-height: 50px;
+    min-height: 35px;
 }
 
-.header_form>form input{
+.header_top_form>form input{
      width: 100%;
      height: 100%;
      padding:10px;
@@ -53,7 +68,7 @@ body{
      border: none;
 }
 
-.header_phone{
+.header_top_phone{
     display: flex;
     column-gap: 5px;
 }
@@ -66,10 +81,11 @@ body{
     row-gap: 0;
 }
 
-.header_phone_number>span{
+.header_phone_number>a>span{
     font-family: "Manrope";
     font-size: 16px;
     font-weight: 600;
+    color: #2D2C28;
 }
 
 .header_phone_number>a{
@@ -79,14 +95,9 @@ body{
     text-decoration: none;
     color: #1B78CC;
 }
- 
-.main{
-    max-width: 95%;
-    margin: auto;
-}
 
 
-.main_catalog_list{
+.header_catalog_list{
     display: flex;
     list-style: none;
     justify-content: space-between;
@@ -94,7 +105,19 @@ body{
     padding-left:0 ;
 }
 
-.main_catalog_list>li{
+.header_catalog_list>li:nth-child(1)>a{
+   align-items: center;
+   justify-content: space-evenly;
+   width: 100%;
+   padding: 0 20px;
+ }
+
+ .header_catalog_list>li:nth-child(1)>a>span{
+    margin-left:5px;
+    margin-right: auto;
+ }
+
+.header_catalog_list>li{
     background-color: #1B78CC;
     width:calc(100% / 5);
     min-height: 40px;
@@ -104,13 +127,14 @@ body{
 }
 
 
-.main_catalog_list>li>a{
+.header_catalog_list>li>a{
     font-family:"Manrope";
     font-size: 14px;
     font-weight: 500;
     line-height: 22px;
     color: #FFFFFF;
     text-decoration: none;
+    display: flex;
 }
 
 .dropdown_menu{
@@ -127,57 +151,131 @@ body{
     display: block;
 }
 
-.main_catalog_list>li:nth-child(1)>a{
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    align-items: center;
-}
+
 
 .arrow>i{
     color: #FFFFFF;
     font-size: 10px;
 }
 
-.main_catalog_list>li:nth-child(1)>a>span{
-    margin-left: 5px;
-    margin-right: auto;
+
+.main{
+    display: flex;
+    justify-content: space-between;
 }
 
-.main_top,.main_dastavka,.main_products,
-.main_scopes,.main_bottom{
-   margin-left:20%;
+.main_left{
+    width: 20%;
+    margin-top: -32px;
 }
+
+.main_left_menu_list{
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_left_menu_list>li{
+    background-color:  #F6F6F6;
+    border: solid 1px  #EEEEEE;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.main_left_menu_list>li>a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    padding: 0 18px;
+}
+
+.main_left_menu_list>li>a>span{
+    font-family: "Manrope";
+    font-size: 14px;
+    font-weight: 600;
+    color: #2D2C28;
+}
+
+.main_left_menu_list>li>a>i,
+.header_catalog_list>li>a>i{
+    font-size: 9px;
+    color:  #2D2C28;
+    opacity: 0.7;
+}
+
+.main_right{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
 
 .main_top_banner>img{
     width:100%;
+    height: 100%;
 }
 
  .main_top_banner{
   position: relative;
 }
 
-.sector::before{
-    content: '';
-    position:absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 0;
-    border-left: solid 380px #1B78CC;
-    border-top: solid 85px transparent;
-    border-bottom: solid 188px #1B78CC;
-    border-right: solid 0px transparent ;
-    
-}
+
 
 .main_top_absolute{
    position:absolute;
-   top: 23%;
-   left: 5%;
+   top:25%;
+   left: 0;
+   height: 74%;
    display: flex;
    flex-direction: column;
+   padding:10px 30px ;
    row-gap: 15px;
+   background-color: #1B78CC;
+   width: 46%;
+   z-index: 100;
+}
+
+
+
+.triangle{
+    position: relative;
+}
+
+.main_top_absolute::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* border-left: solid 373px  #1B78CC;
+    border-bottom: solid 0 #1B78CC;
+    border-top:solid 74px transparent;
+    border-right: solid 0 transparent; */
+    z-index: 0;
+    transform: rotate(30deg);
+    display: none;
+}
+
+.main_top_absolute::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    /* border-top: solid 205px #1B78CC;
+    border-right: solid 82px transparent;
+    border-bottom: solid 0 transparent;
+    border-left: solid 0 #1B78CC; */
+    z-index: 0;
+    background:  #1B78CC;
+    transform: rotate(30deg);
+    display: none;
 }
 
 .top_absolute_header>h3{
@@ -191,7 +289,7 @@ body{
 .top_absolute_text>p{
      max-width: 350px;
      font-family: "Manrope";
-     font-size: 14px;
+     font-size: 13px;
      font-weight: 400;
      color: #FFFFFF;
      margin: 0;
@@ -199,10 +297,12 @@ body{
 }
 
 
-.top_absolute_button button{
+.top_absolute_button a{
     background: #C91717;
-    text-align: center;
-    min-width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 130px;
     min-height: 35px;
     border: none;
     font-family: "Manrope";
@@ -426,7 +526,15 @@ body{
 .main_bottom_content{
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 10px;
+}
+
+.bottom_content_box{
+    width: calc(100% / 4 -10px);
+}
+
+.bottom_content_box>img{
+    width: 100%;
 }
 
 .footer{
@@ -434,10 +542,8 @@ body{
     margin-top: 0;
 }
 
-.block-container{
-    max-width: 70%;
-    padding:2%;
-    margin: auto ;
+.footer>.box-container{
+    padding:2% ;
     display: flex;
     justify-content: space-between;
 }
@@ -524,7 +630,7 @@ body{
     
 }
 
-.footer_right_phone_number>span{
+.footer_right_phone_number>a>span{
     font-family: "Manrope";
     font-size: 16px;
     font-weight: 600;
