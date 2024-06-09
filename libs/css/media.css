@@ -291,7 +291,7 @@
         display: none;
     } 
 
-    button.mobile-menu-button:hover ul.header_catalog_list{
+    .header_bottom_menu:hover ul.header_catalog_list{
         display: flex;
     }
 
@@ -304,7 +304,7 @@
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 15px;
+        top: -170px;
         align-items: center;
         justify-content: center
     }
